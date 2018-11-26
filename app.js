@@ -67,7 +67,8 @@ app
   .use(router.routes())
   .use(router.allowedMethods());
 
+const  serve = require("koa-static");
+app.use(serve(__dirname+ "/static/"));
 
-
-app.listen(1234)
-console.log('app started at port 1234...');
+app.listen(80)
+console.log('app started at port 80...');
