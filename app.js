@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const mongoose = require('mongoose')
 
-const db = 'mongodb://148.70.66.85:27017/rest'
+const db = 'mongodb://localhost:27017/rest'
 
 /**
  * mongoose连接数据库
