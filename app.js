@@ -70,5 +70,16 @@ app
 const  serve = require("koa-static");
 app.use(serve(__dirname+ "/static/"));
 
-app.listen(80)
-console.log('app started at port 80...');
+var http = require('http');
+var https = require('https');
+// SSL options
+var options = {
+  key: fs.readFileSync('./ssl/2_qxxnest.cn.key'),  //ssl文件路径
+  cert: fs.readFileSync('./ssl/1_qxxnest.cn_bundle.crt')  //ssl文件路径
+};
+
+// start the server
+http.createServer(app.callback()).listen(80);
+https.createServer(options, app.callback()).listen(443);
+
+console.log('app started');

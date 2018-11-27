@@ -18,6 +18,8 @@
     "babel-register": "^6.24.1",
     "bluebird": "^3.5.0",
     "cloudinary": "^1.8.0",
+    "http": "0.0.0",
+    "https": "^1.0.0",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.2.0",
     "koa-logger": "^2.0.1",
