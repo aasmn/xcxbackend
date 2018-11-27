@@ -20,6 +20,10 @@ module.exports = function(){
   router.post('/test/user/delete',User.deleteUser)
 
   router.get('/orders',Order.orders)
+  router.get('/.well-known/pki-validation/fileauth.txt',async (cx,next)=>{
+    await next();
+    cx.response.body="201811251135564p6t8fcuswy4wxdxlenqwfwrzc2nsy0oumg5qn3tkq542jcd39";
+  });
 
   return router
 }
